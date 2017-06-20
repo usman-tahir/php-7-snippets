@@ -16,13 +16,15 @@ class Application {
     }
 }
 
+class MyLogger implements Logger {
+    public function log(string $message) {
+        print("LOG: " . $message);
+    }
+}
+
 // Create a new instance of the application
 $app = new Application;
-$app->setLogger(new class implements Logger {
-   public function log(string $message) {
-       print("LOG: " . $message);
-   } 
-});
+$app->setLogger(new MyLogger);
 
 $app->getLogger()->log("My first log message");
 
