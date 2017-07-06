@@ -1,0 +1,20 @@
+{
+    "name": "usmantahir/composer-basics",
+    "description": "A basic Composer project to familiarize oneself with Composer concepts",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "usman-tahir",
+            "email": "tahir.usman.ali94@outlook.com"
+        }
+    ],
+    "require": {
+        "symfony/yaml": "^3.3"
+    },
+    "autoload": {
+      "psr-4": {
+        "Shapes\\": "source/"
+      }
+    }
+}
